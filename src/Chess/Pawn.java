@@ -1,6 +1,6 @@
 package Chess;
 
-public class Pawn extends MoveSet {
+public class Pawn extends Piece {
     public static boolean isValidMove(Board board, int fromRank, int fromFile, int rank, int file, boolean whitesMove)
     {
         int f = whitesMove ? 1 : -1;

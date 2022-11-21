@@ -19,15 +19,16 @@ public class Board {
     final static String BLANK_SPACE_ERROR = "There is no piece in this space.";
     final static String NOT_PLAYERS_PIECE_ERROR = "This piece cannot be moved by this player.";
 
-    static int[][] board;
+    static String[][] board;
 
     public Board() {
-        board = new int[RANKS+1][FILES+1];
+        board = new String[RANKS+1][FILES+1];
 
-        //initializeBoard();
-        testInitializeBoard();
+        initializeBoard();
+        //testInitializeBoard();
     }
 
+    /*
     public boolean makeMove(String move, boolean whitesMove) {
         // Check if piece is in the from slot
         // Check if piece can move in that direction
@@ -95,16 +96,17 @@ public class Board {
             return false;
         }
     }
+    */
 
-    public int getSpace(int rank, int file) {
+    public String getSpace(int rank, int file) {
         if (rank >= 1 && rank <= RANKS && file >= 1 && file <= FILES) {
             return board[rank][file];
         }
-        return -1;
+        return "";
     }
 
-    public int getColor(int rank, int file) {
-        return (board[rank][file] / 10) * 10;
+    public char getColor(int rank, int file) {
+        return board[rank][file].charAt(0);
     }
 
     public boolean hasCheckmate() {
