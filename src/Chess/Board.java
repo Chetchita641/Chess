@@ -149,7 +149,7 @@ public class Board {
     void initializeBoard() {
         int i;
         for (i = 1; i <= 8; i++) {
-            board[1][i] = Piece.getInt("W" + BACK_LINE[i]);
+            board[1][i] = Piece.getInt("w" + BACK_LINE[i]);
         }
         for (i = 1; i <= 8; i++) {
             board[2][i] = Piece.getInt("WP");
